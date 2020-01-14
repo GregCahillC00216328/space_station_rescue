@@ -21,11 +21,19 @@
   <ItemGroup>
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="Wanderer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
     <ClInclude Include="Wanderer.h" />
+=======
+    <ClCompile Include="Player.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Player.h" />
+>>>>>>> 4b737e306bdba8e35acf53e73134285bed8dea29
   </ItemGroup>
   <ItemGroup>
     <Image Include="ASSETS\IMAGES\craft.png" />

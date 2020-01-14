@@ -11,7 +11,7 @@
 /// </summary>
 #include <SFML/Graphics.hpp>
 #include "Wanderer.h"
-
+#include "Player.h"
 class Game
 {
 public:
@@ -24,6 +24,7 @@ public:
 
 private:
 	Wanderer m_wanderer;
+	Player m_pChar;
 	void processEvents();
 	void processKeys(sf::Event t_event);
 	void update(sf::Time t_deltaTime);

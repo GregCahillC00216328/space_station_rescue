@@ -28,6 +28,7 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Wanderer.cpp">
+    <ClCompile Include="Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -36,6 +37,7 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Wanderer.h">
+    <ClInclude Include="Player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

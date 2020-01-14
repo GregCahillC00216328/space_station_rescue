@@ -16,7 +16,7 @@
 /// load and setup thne image
 /// </summary>
 Game::Game() :
-	m_window{ sf::VideoMode{ 800U, 600U, 32U }, "SFML Game" },
+	m_window{ sf::VideoMode::getFullscreenModes()[0], "SFML window", sf::Style::Fullscreen },
 	m_exitGame{false} //when true game will exit
 {
 	setupFontAndText(); // load font 
@@ -99,6 +99,7 @@ void Game::processKeys(sf::Event t_event)
 void Game::update(sf::Time t_deltaTime)
 {
 	m_wanderer.update(t_deltaTime);
+	m_pChar.update(t_deltaTime.asMilliseconds());
 	if (m_exitGame)
 	{
 		m_window.close();
@@ -111,8 +112,9 @@ void Game::update(sf::Time t_deltaTime)
 void Game::render()
 {
 	m_window.clear(sf::Color::White);
-	m_window.draw(m_welcomeMessage);
 	m_wanderer.render(m_window);
+	m_window.clear();
+	m_pChar.render(m_window);
 	m_window.display();
 }
 
@@ -141,5 +143,5 @@ void Game::setupFontAndText()
 /// </summary>
 void Game::setupSprite()
 {
-	
+	m_pChar.movement(sf::Vector2f(m_window.getSize().x/2,m_window.getSize().y/2));
 }
