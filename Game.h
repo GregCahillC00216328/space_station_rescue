@@ -10,7 +10,7 @@
 /// Don't forget the endif at the bottom
 /// </summary>
 #include <SFML/Graphics.hpp>
-
+#include "Player.h"
 class Game
 {
 public:
@@ -22,7 +22,7 @@ public:
 	void run();
 
 private:
-
+	Player m_pChar;
 	void processEvents();
 	void processKeys(sf::Event t_event);
 	void update(sf::Time t_deltaTime);
