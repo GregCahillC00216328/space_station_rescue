@@ -1,8 +1,7 @@
 /// <summary>
-/// @author Peter Lowe
-/// @date May 2019
-///
-/// you need to change the above lines or lose marks
+/// @author Dylan Curran and Greg Cahill
+/// @date January 2020
+
 /// </summary>
 
 #include "Game.h"
@@ -99,6 +98,7 @@ void Game::processKeys(sf::Event t_event)
 /// <param name="t_deltaTime">time interval per frame</param>
 void Game::update(sf::Time t_deltaTime)
 {
+	m_wanderer.update(t_deltaTime);
 	if (m_exitGame)
 	{
 		m_window.close();
@@ -112,7 +112,7 @@ void Game::render()
 {
 	m_window.clear(sf::Color::White);
 	m_window.draw(m_welcomeMessage);
-	m_window.draw(m_logoSprite);
+	m_wanderer.render(m_window);
 	m_window.display();
 }
 
