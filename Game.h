@@ -1,6 +1,6 @@
 /// <summary>
-/// author Pete Lowe May 2019
-/// you need to change the above line or lose marks
+/// author Dylan Curran and Greg Cahill
+/// January 2020
 /// </summary>
 #ifndef GAME_HPP
 #define GAME_HPP
@@ -10,6 +10,7 @@
 /// Don't forget the endif at the bottom
 /// </summary>
 #include <SFML/Graphics.hpp>
+#include "Wanderer.h"
 #include "Player.h"
 class Game
 {
@@ -22,6 +23,7 @@ public:
 	void run();
 
 private:
+	Wanderer m_wanderer;
 	Player m_pChar;
 	void processEvents();
 	void processKeys(sf::Event t_event);
